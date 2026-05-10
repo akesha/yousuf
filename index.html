@@ -494,6 +494,28 @@
     section[data-screen-label]{padding-right:32px}
   }
 
+  /* ---------- SOCIAL RAIL (left) ---------- */
+  .social-rail{
+    position:fixed;top:50%;left:24px;transform:translateY(-50%);
+    z-index:120;
+    display:flex;flex-direction:column;align-items:center;gap:28px;
+    padding:14px 8px;
+  }
+  .social-rail a{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    text-decoration:none;
+    color:var(--ink-dim);
+    font-family:var(--sans);
+    font-size:11px;font-weight:600;
+    letter-spacing:.28em;text-transform:uppercase;
+    transition:color .35s ease, transform .35s ease;
+  }
+  .social-rail a:hover{color:var(--accent)}
+  @media (max-width:880px){
+    .social-rail{display:none}
+  }
+
   /* ---------- ARTICLE ROLLOVER PREVIEW ---------- */
   .art-preview{
     position:fixed;top:0;left:0;
@@ -786,6 +808,12 @@
 <script src="image-slot.js"></script>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- Social rail (left) -->
+<nav class="social-rail" aria-label="Social links">
+  <a href="https://www.linkedin.com/in/ymarvi/" target="_blank" rel="noopener">LinkedIn</a>
+  <a href="https://x.com/EpsilonMarvi" target="_blank" rel="noopener">Twitter</a>
+</nav>
 
 <!-- Side menu / page indicator -->
 <nav class="side-menu" id="sideMenu" aria-label="Page sections">
